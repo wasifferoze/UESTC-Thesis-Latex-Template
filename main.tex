@@ -1,60 +1,67 @@
-\documentclass[master]{thesis-uestc}
-% 此处-----------|---的模板类型设置请参照README
-\title{中文题目-电子科技大学学位论文模板Test}{English Title} % 论文题目
-\author{姓名}{English Name} % 作者姓名
-\setdate[submit]{2022年3月17日} % 论文提交日期，可留空
-\setdate[oral]{2022年4月15日}  % 答辩日期，可留空
-\setdate[confer]{2022年6月} % 学位授予日期，可留空
-\advisor{\qquad 张三\qquad\qquad 教\chinesespace 授}{English name English title}
-% \coAdvisor{合作导师姓名\chinesespace 导师职称}{Co advisor English name English title} % 仅专业硕士/博士使用，在扉页/英文首页添加合作导师，不使用请注释
-\school{计算机科学与工程学院(网络空间安全学院)}{School of Computer Science and Engineering(School of Cyberspace Security)} % 学院信息
-\major{计算机科学与技术}{Computer Science and Technology} % 专业信息
-\studentnumber{xxxxx} % 学号
-\ProfessionalDegreeArea{随便学学} % 专业硕士专用：专业学位领域
-\ClassificationNumber{TP309.2} % 分类号
-\ClassifiedClass{公开} % 密级
-\UDCNumber{004.78} % UDC号
-\Chairman{xxxxx} % 答辩委员会主席
+\documentclass[doctor,english]{thesis-uestc}  % other options: bachelor, master promaster, doctor, engdoctor
+% For the template typesetting, please refer to README
+\title{人工智能中常识推理的有效方法}{Efficient Methods for Commonsense Reasoning in Artificial Intelligence}
+\author{Feroze Wasif}{Feroze Wasif} % % Author's name
+\setdate[submit]{2022年3月17日} % Thesis submission date (Optional)
+\setdate[oral]{2022年4月15日}  % Oral defense date (Optional)
+\setdate[confer]{2022年6月} % Degree conferral date (Optional)
+\advisor{xx \chinesespace xx}{xx xx xx} % Advisor's name and title
+% \coAdvisor{合作导师姓名\chinesespace 导师职称}{Co advisor English name English title} % Only for professional master's/PhD students. Adds co-advisor on title page/English title page. Comment out if not used.
+\school{计算机科学与工程学院(网络空间安全学院)}{School of Computer Science and Engineering(School of Cyberspace Security)} % School information
+\major{计算机科学与技术}{Computer Science and Technology} % Major information
+\studentnumber{xxxxxxx} % Student id
+% \ProfessionalDegreeArea{随便学学} % Only for professional degree
+\ClassificationNumber{} % Classification number (assigned by the library)
+\ClassifiedClass{公开} % Confidentiality level thesis/dissertation, usually is public for international students
+\UDCNumber{} % UDC number (assigned by the library)
+\Chairman{xxxxx} % Chairperson of defense committee
 
-% 取消注释以下内容，用于禁止文中换行处的英语单词自动截断换行。
+% Uncomment the following section to prevent automatic word breaking at line breaks in English text.
 % \tolerance=1
 % \emergencystretch=\maxdimen
 % \hyphenpenalty=10000
 % \hbadness=10000
 
-\makeglossaries % 产生缩略词表/符号表专用,不使用时请注释。 注意，之后的acronym，glossaryentry以及相关的引用也请注释。
-\newacronym[description=逻辑卷管理器]{lvm}{LVM}{Logical Volume Manager} % 定义缩略词:以本项为例,逻辑卷管理器为中文名称;lvm用于文内引用;LVM为显示的应为缩略语或符号;Logical Volume Manager为显示的英文全称/描述。
-\newglossaryentry{tree}{name={tree}, description={trees are the better humans}}  % 定义符号:以本项为例,name={tree}为符号名称;tree用于文内引用; description={trees are the better humans}为显示的描述。页码自动添加。
+\makeglossaries % Required for generating glossary/acronym lists. Comment out if not used. Note: Also comment out acronym, glossary entries, and related references if not used.
+\newacronym[description=逻辑卷管理器]{lvm}{LVM}{Logical Volume Manager} % Define an acronym. Example: 
+% "逻辑卷管理器" is the Chinese name,
+% "lvm" is used for in-text references,
+% "LVM" is the displayed acronym or symbol,
+% "Logical Volume Manager" is the full English term/description.
+\newglossaryentry{tree}{name={tree}, description={trees are the better humans}}  % Define a glossary entry. Example:
+% "tree" is the symbol name,
+% "tree" is used for in-text references,
+% "trees are the better humans" is the displayed description (with automatic page number inclusion).
 
 \begin{document}
 
-\makecover % 封面+中英文扉页
-\originalitydeclaration % 原创新声明
-% \signatureofdeclaration{signature.pdf} % 用于添加扫描版签字后的原创新声明（使用时取消注释本行，并注释掉上一行）
-% 中文摘要
+\makecover % Cover page + Chinese and English title pages
+\originalitydeclaration % Statement of originality
+% \signatureofdeclaration{signature.pdf} % Used to add a scanned version of the signed originality statement (Uncomment this line if using a scanned signature and comment out the previous line)
+% Chinese abstract
 \begin{chineseabstract}
 
-    \chinesekeyword{xxx，xxx，xxx} % 中文关键词
+    \chinesekeyword{xxx，xxx，xxx} % Chinese keywords
 \end{chineseabstract}
-% 英文摘要
+% English abstract
 \begin{englishabstract}
 
-    \englishkeyword{xxx, xxx, xxx} % 英文关键词
+    \englishkeyword{xxx, xxx, xxx} % English keywords
 \end{englishabstract}
 
-\thesistableofcontents % 目录
-\thesisfigurelist % 图目录，仅在需要时添加，一般情况下请注释
-\thesistablelist % 表目录，仅在需要时添加，一般情况下请注释
-% \glsaddall % 默认仅显示被正文引用的项,取消注释以显示所有已定义的缩略词/符号
-\thesisglossarylist % 缩略词表，仅在需要时添加，一般情况下请注释
-\thesissymbollist % 符号表，仅在需要时添加，一般情况下请注释
+\thesistableofcontents % Table of contents
+\thesisfigurelist % List of figures (only include if needed; otherwise, comment out)
+\thesistablelist % List of tables (only include if needed; otherwise, comment out)
+% \glsaddall % By default, only glossary items cited in the text are shown. Uncomment to display all defined acronyms/symbols.
+\thesisglossarylist % Glossary list (only include if needed; otherwise, comment out)
+\thesissymbollist % List of symbols (only include if needed; otherwise, comment out)
 
-% 正文内容
-\chapter{绪\hspace{6pt}论}
+% Main content starts here
+\chapter{Introduction}
 
-角标参考文献\citing{chen2001hao}测试，普通参考文献~\cite{clerc2010discrete}。
+For Superscript citation style use\citing{chen2001hao}test, Standard citation style use ~\cite{clerc2010discrete}.
 
-这是符号\gls{tree}\cite{liuxf2006}。
+Symbol reference\gls{tree}\cite{liuxf2006}. (references a glossary entry)
 
 $\hat{H}, f(x)$, $\vec{V}$
 
@@ -62,7 +69,7 @@ $$\hat{H}$$
 
 $\mathcal{C}_i$
 
-这是缩略词\acrlong{lvm}的长引用，这是缩略词的短引用\acrshort{lvm}。
+This is the long form reference of the acronym \acrlong{lvm}, and this is the short form reference \acrshort{lvm}.
 
 \begin{figure}[!htb]
     \includegraphics[width=0.5\linewidth]{pic/figure.pdf}
@@ -77,10 +84,10 @@ $\mathcal{C}_i$
         \includegraphics[width=0.49\textwidth]{pic/figure.pdf} & 
         \hspace{5pt}
         \includegraphics[width=0.49\textwidth]{pic/figure.pdf}     \\
-        \mbox{\small (a)随便试试的超级长的标题}                                                                               & 
-        \mbox{\small (b)随便试试的超级长的标题}                                                                                  \\
+        \mbox{\small (a)A randomly attempted super long title.}                                                                               & 
+        \mbox{\small (b)A randomly attempted super long title.}                                                                                  \\
     \end{tabular}
-    \caption{随便试试的超级长的标题-总}
+    \caption{A randomly tried super long title - Total.}
     \label{fig:test}
 \end{figure}
 
@@ -116,11 +123,13 @@ $\mathcal{C}_i$
 \end{figure}
 
 
-\chapter{相关研究基础}
-\chapter{工作内容xxx}
-\chapter{全文总结与展望}
+\chapter{Related work}
+\chapter{Main work 1}
+\chapter{Main work 2}
+\chapter{Main work 3}
+\chapter{Conclusion and Future work}
 
-算法框：
+Algorithm template：
 
 \begin{algorithm}[H]\label{alg:1}
     \KwData{this text}
@@ -138,31 +147,32 @@ $\mathcal{C}_i$
     \caption{How to wirte an algorithm.}
 \end{algorithm}
 
-这是算法\algref{alg:1}。
+This is the algorithm.\algref{alg:1}。
 
 \thesisacknowledgement
 
-xxxx % 直接填写致谢内容，写法与正文一致
+This is my acknowledgment. % Directly fill in the acknowledgment content, with the same writing style as the main text.
 
-\thesisbibliography[large]{reference} % 参考文献
+\thesisbibliography[large]{reference} % references
 
 \thesisappendix
-\chapter{xxxx} % 直接填写附录内容，写法与正文一致
+\chapter{Appendix 1} % Directly fill in the appendix content, with the same writing style as the main text.
 
-% 攻读学位期间成果（本科不添加），例如：
+% List your achievements (list of published papers for doctor candidates)：
 \begin{thesistheaccomplish}
-    \section{学术论文}
+    \section{Academic papers}
     \bibitem{SGXDedup} \textbf{Ren, Yanjing} and Li, Jingwei and Yang, Zuoru and Lee, Patrick PC and Zhang, Xiaosong. Accelerating Encrypted Deduplication via SGX[C]. Proc.of USENIX ATC, 2021, 957-971. \textbf{CCF-A}
-    \section{发明专利}
+    \section{Invention patents}
     \bibitem{CN111338572B} 李经纬, 杨祚儒, \textbf{任彦璟}, 李柏晴, 张小松. 一种可调节加密重复数据删除方法:CN111338572B[P]. 2021-09-14.
 \end{thesistheaccomplish}
 
-% 以下为本科同学专用，插入文献翻译
-\thesistranslationoriginal
-\section{Tahoe-LAFS: The Least-Authority File System}
-% \insertPDFPage{} % 用于插入单页PDF文件，例如原始文献（该操作会导致页码被取消，请谨慎使用）
+% The following is for undergraduate students only, insert translation of the references.
+% comment or uncomment if necessary for you
+% \thesistranslationoriginal
+% \section{Tahoe-LAFS: The Least-Authority File System}
+% \insertPDFPage{} % "Used to insert a single-page PDF file, such as the original literature (this operation will cause the page numbers to be reset, please use with caution)."
 
-\thesistranslationchinese
-\section{Tahoe-LAFS：最小权限文件系统}
+% \thesistranslationchinese
+% \section{Tahoe-LAFS：最小权限文件系统}
 
 \end{document}
