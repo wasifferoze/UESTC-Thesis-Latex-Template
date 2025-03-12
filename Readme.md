@@ -5,3 +5,9 @@ This repository contains a UESTC LaTeX thesis template designed to help students
 For a detailed English guide, read instructions from the [original creator](https://github.com/tinoryj/UESTC-Thesis-Latex-Template) of this template.
 
 **[English Instructions](README_Eng.md)**
+
+## Wechat group for support
+
+Can join the WeChat group so that international students can support and guide each other.
+
+![WeChat Group](./READMEFig/wexin.jpg)
